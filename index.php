@@ -8,7 +8,7 @@
     </head>
     <body>
         <header>
-            <img class="logo" src="art/logo2.png">
+            <img class="logo" src="art/logo.png">
             <nav>
                 <ul class="nav_links">
                     <li><a href="#">Connections</a></li>

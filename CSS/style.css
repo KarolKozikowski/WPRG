@@ -51,6 +51,7 @@ header{
     scale: 90%;
     opacity: 95%;
     margin-right: auto;
+    margin-left: -3vw;
 }
 .login_button{
     font-family: 'Open Sans', sans-serif;
@@ -81,7 +82,7 @@ header{
     background-repeat: no-repeat;
     background-size: 100vw;
     background-position:center;
-    background-color: rgb(206, 206, 206);
+    background-color: #202020;
     opacity: 95%;
     transition: opacity, 400ms;
 }
