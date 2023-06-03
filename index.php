@@ -21,7 +21,7 @@
         </header>
         <section class="main_sectoin">
             <h1>Arctic Airlines</h1>
-            <p>The gateway to The North</p>
+            <p>Your gateway to The North</p>
             <a href="#" class="main_button">Get Started</a>
         </section>
         <footer>

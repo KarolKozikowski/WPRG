@@ -1,6 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 :root{
-    --main_gradient: linear-gradient(0deg, #131c2c, #304d6e 70%);
+    --main_gradient: linear-gradient(0deg, #12191b, #3d6070 100%);
+    --oceanblue: #304d6e;
+    --greenishblue: #006d8f;
+    --greenishblue2: #094f64;
+    --highlights: #00c3ff;
+    --textwhite: #edf0f1;
+    --textlight: #dddddd;
 }
 *{
     margin: 0;
@@ -15,66 +21,103 @@ body{
 
 
 header{
-    background-color: #242424;
+    background-color: #202020;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 30px 10%;
+    padding: 10px 8vw;
 }
 .nav_links{
     list-style: none;
 }
 .nav_links li{
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0px 15px;
 }
 .nav_links a{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-display: swap;
     font-size: 16px;
-    color: #edf0f1;
+    color: var(--textlight);
     text-decoration: none;
+    transition: all, 200ms;
+}
+.nav_links a:hover{
+    color: var(--highlights);
+    transform: scaleX(150%);
 }
 .logo{
     scale: 90%;
+    opacity: 95%;
     margin-right: auto;
 }
 .login_button{
-    background-color: #007bff;
-    color: #edf0f1;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: var(--greenishblue);
+    color: var(--textwhite);
     padding: 9px 25px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    margin-left: 20px;
+    margin-left: 40px;
+    transition: color, 200ms;
+}
+.login_button:hover{
+    background-color: var(--greenishblue2);
 }
 
 
 
 .main_sectoin{
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
-    font-family: basic-sans, sans-serif;
-    padding: 50px;
+    padding: 10vh;
+    margin-top: 5vh;
+    background-image: url("../art/background1.png");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-position:center;
     background-color: rgb(206, 206, 206);
-    opacity: 80%;
+    opacity: 95%;
+    transition: opacity, 400ms;
+}
+.main_sectoin:hover{
+    opacity: 100%;
 }
 .main_sectoin h1{
-    font-size: 36px;
+    font-size: 70px;
+    font-weight: 200;
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 250px;
 }
 .main_sectoin p{
     font-size: 18px;
     margin-bottom: 20px;
+    font-weight: 300;
+    color: var(--textlight);
 }
 .main_button {
     display: inline-block;
-    font-family: basic-sans, sans-serif;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 9px 25px;
+    background-color: var(--greenishblue);
+    color: var(--textwhite);
     text-decoration: none;
-    border-radius: 5px;
+    border: none;
+    border-radius: 20px;
+    transition: color, 200ms;
+}
+.main_button:hover{
+    background-color: var(--greenishblue2);
 }
 footer {
     color: #fff;
