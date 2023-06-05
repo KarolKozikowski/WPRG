@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/style.css">
+        <title>Sign In - Arctic Airlines</title>
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="../art/logo.png">
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="../index.html">Home Page</a></li>
+                    <li><a href="../index.html">Already have an account?</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div>
+            <form action="../PHP/signin2.php" method='GET' enctype='multipart/form-data'>
+                <label>Name:</label>
+                <input type="text" name="fname" placeholder="Enter your first name:" required><br>
+                <label>Last Name:</label>
+                <input type="text" name="lname" placeholder="Enter your last name:" required><br>
+                <label>Country:</label>
+                <select name="country" required>
+                    <option value="Finland">Suomi (Finland)</option>
+                    <option value="Norway">Norge (Norway)</option>
+                    <option value="Sweden">Sverige (Sweden)</option>
+                    <option value="Denmark">Danmark (Denmark)</option>
+                    <option value="Estonia">Eesti (Estonia)</option>
+                    <option value="Poland">Polska (Poland)</option>
+                    <option value="Germany">Deutschland (Germany)</option>
+                    <option value="Netherlands">Nederland (Netherlands)</option>
+                    <option value="France">France</option>
+                    <option value="Italy">Italia (Italy)</option>
+                    <option value="Switzerland">Schweiz (Switzerland)</option>
+                    <option value="FIslands">Forroyar (Faroe Islands)</option>
+                    <option value="Iceland">Ísland (Iceland)</option>
+                    <option value="Greenland">Kalaallit Nunaat (Greenland)</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="US">United States</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Japan">日本 (Japan)</option>
+                </select>
+                <br><input type="submit" value="next">
+            </form>
+        </div>
+    </body>
+</html>
