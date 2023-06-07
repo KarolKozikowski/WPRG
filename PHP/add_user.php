@@ -25,14 +25,16 @@ else $password=null;
 //connecting to server
 $server_connection = new mysqli("localhost", "root", "", "arctic_airlines");
 if(!$server_connection){
-    header("location: ../index.html?serwer sie zesral");
-    exit();
+    header("location: ../index.php?serwer sie zesral");
+    exit;
 }
 $max_id=$server_connection->query("SELECT users.ID FROM users ORDER BY ID DESC LIMIT 1");
-while($row=$max_id->fetch_assoc()) $user_id = $row['ID']+1;
+while($row=$max_id->fetch_assoc()) $user_id = $row['ID']+1; //calculates user ID (auto increment but in php)
 $insert_query=$server_connection->prepare("INSERT INTO users (ID, First_name, Last_name, Phone_nr, Email, Country, Is_Fat, username, user_password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 $insert_query->bind_param("isssssiss", $user_id, $fname, $lname, $phone, $email, $country, $is_fat, $username, $password);
 $insert_query->execute();
-header("location: ../index.html");
-exit();
+header("location: ../index.php");
+$insert_query->close();
+$server_connection->close();
+exit;
 ?>

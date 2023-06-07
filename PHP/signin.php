@@ -11,8 +11,8 @@
             <img class="logo" src="../art/logo.png">
             <nav>
                 <ul class="nav_links">
-                    <li><a href="../index.html">Home Page</a></li>
-                    <li><a href="../index.html">Already have an account?</a></li>
+                    <li><a href="../index.php">Home Page</a></li>
+                    <li><a href="../PHP/login.php">Already have an account?</a></li>
                 </ul>
             </nav>
         </header>
@@ -53,7 +53,7 @@
                 <br><label>Username:</label>
                 <input type="text" name="username" placeholder="enter your username" required>
                 <br><label>Password:</label>
-                <input type="text" name="password" placeholder="enter your password" required>
+                <input type="password" name="password" placeholder="enter your password" required>
                 <input hidden type="text" name="fname" value="<?php echo $_GET['fname'] ?>">
                 <input hidden type="text" name="lname" value="<?php echo $_GET['lname'] ?>">
                 <input hidden type="text" name="country" value="<?php echo $_GET['country'] ?>">
