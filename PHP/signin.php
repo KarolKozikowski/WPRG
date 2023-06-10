@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../CSS/style.css">
         <title>Sign In - Arctic Airlines</title>
+        <script type="text/javascript" src="../JS/scripts.js"></script>
     </head>
     <body>
         <header>
@@ -18,7 +19,7 @@
         </header>
         <div>
             <h1>More info:</h1>
-            <form action="add_user.php" method='GET' enctype='multipart/form-data'>
+            <form action="user_add.php" method='GET' enctype='multipart/form-data'>
                 <label>Email:</label>
                 <input type="email" name="email" placeholder="enter your email" required>
                 <?php
@@ -52,8 +53,9 @@
                 <small>Check this box if you need two seats</small>
                 <br><label>Username:</label>
                 <input type="text" name="username" placeholder="enter your username" required>
-                <br><label>Password:</label>
-                <input type="password" name="password" placeholder="enter your password" required>
+                <br><label>Password (min 8 characters):</label>
+                <input type="password" id="pass" name="password" minlength="8" placeholder="enter your password" required>
+                <input type="checkbox" onclick="show_password()">show
                 <input hidden type="text" name="fname" value="<?php echo $_GET['fname'] ?>">
                 <input hidden type="text" name="lname" value="<?php echo $_GET['lname'] ?>">
                 <input hidden type="text" name="country" value="<?php echo $_GET['country'] ?>">

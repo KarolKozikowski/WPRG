@@ -1,8 +1,9 @@
 <?php
 session_start();
-session_unset();
-session_destroy();
-//TODO
+if(isset($_COOKIE["user_id"]) && isset($_COOKIE["user_name"])){
+    $_SESSION["user_id"]=$_COOKIE["user_id"];
+    $_SESSION["user_name"]=$_COOKIE["user_name"];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +24,10 @@ session_destroy();
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-            <a href="HTML/signin.html"><button class="login_button">Sign in</button></a>
+            <?php
+            if(isset($_SESSION["user_name"])) echo "<a href='PHP/user.php'><button class='login_button'>".$_SESSION["user_name"]."</button></a>";
+            else echo "<a href='HTML/signin.html'><button class='login_button'>Sign in</button></a>";
+            ?>
         </header>
         <section class="main_sectoin">
             <h1>Arctic Airlines</h1>
