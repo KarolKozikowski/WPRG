@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../CSS/style.css">
+        <link rel="stylesheet" href="../CSS/style2.css">
         <title>Sign in - Arctic Airlines</title>
     </head>
     <body>
@@ -16,14 +17,14 @@
                 </ul>
             </nav>
         </header>
-        <div>
-            <form action="../PHP/signin.php" method='GET' enctype='multipart/form-data'>
-                <label>Name:</label>
-                <input type="text" name="fname" placeholder="Enter your first name:" required><br>
-                <label>Last Name:</label>
-                <input type="text" name="lname" placeholder="Enter your last name:" required><br>
-                <label>Country:</label>
-                <select name="country" required>
+        <div class="idk">
+            <form class="idk_form" action="../PHP/signin.php" method='GET' enctype='multipart/form-data'>
+                <label>Name:</label><br>
+                <input class="input" type="text" name="fname" placeholder="Enter your first name:" required><br>
+                <label>Last Name:</label><br>
+                <input class="input" type="text" name="lname" placeholder="Enter your last name:" required><br>
+                <label>Country:</label><br>
+                <select class="input" name="country" required>
                     <option value="Finland">Suomi (Finland)</option>
                     <option value="Norway">Norge (Norway)</option>
                     <option value="Sweden">Sverige (Sweden)</option>
@@ -45,8 +46,11 @@
                     <option value="Japan">日本 (Japan)</option>
                     <option value="Other">--OTHER--</option>
                 </select>
-                <br><input type="submit" value="next">
+                <br><input class="button" type="submit" value="Next">
             </form>
+        </div>
+        <div class="create">
+            <p>Create a new account</p>
         </div>
     </body>
 </html>

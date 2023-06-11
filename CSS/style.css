@@ -26,6 +26,13 @@ header{
     justify-content: flex-end;
     align-items: center;
     padding: 10px 8vw;
+    box-shadow: 0 0 10px;
+    transition-property: box-shadow;
+    transition-duration: 400ms;
+    transition-delay: 50ms;
+}
+header:hover{
+    box-shadow: 0 0 20px;
 }
 .nav_links{
     list-style: none;
@@ -84,10 +91,13 @@ header{
     background-position:center;
     background-color: #202020;
     opacity: 95%;
-    transition: opacity, 400ms;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition-duration: 200ms;
+    transition-delay: 50ms;
 }
 .main_sectoin:hover{
     opacity: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .main_sectoin h1{
     font-size: 70px;
