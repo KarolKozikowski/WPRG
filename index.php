@@ -26,13 +26,13 @@ if(isset($_COOKIE["user_id"]) && isset($_COOKIE["user_name"])){
             </nav>
             <?php
             if(isset($_SESSION["user_name"])) echo "<a href='PHP/user.php'><button class='login_button'>".$_SESSION["user_name"]."</button></a>";
-            else echo "<a href='HTML/signin.html'><button class='login_button'>Sign in</button></a>";
+            else echo "<a href='PHP/login.php'><button class='login_button'>Sign in</button></a>";
             ?>
         </header>
         <section class="main_sectoin">
             <h1>Arctic Airlines</h1>
             <p>Your gateway to The North</p>
-            <a href="#" class="main_button">Get Started</a>
+            <a href="HTML/signin.html" class="main_button">Get Started</a>
         </section>
         <footer>
             <p>&copy; 2023 Karol Kozikowski. Not all rights reserved.</p>

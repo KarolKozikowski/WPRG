@@ -31,7 +31,7 @@ else $password=null;
 //connecting to server
 $server_connection = new mysqli("localhost", "root", "", "arctic_airlines");
 if(!$server_connection){
-    header("location: ../index.php?serwer sie zesral");
+    header("location: ../index.php?error=serwer sie zesral");
     exit;
 }
 
@@ -41,7 +41,7 @@ $search_query->bind_param("s", $email);
 $search_query->execute();
 $search_query_result = $search_query->get_result();
 if($search_query_result->num_rows > 0){
-    header("location: ../PHP/signin.php?fname=$fname&lname=$lname&country=$country&error=Email taken");
+    header("location: ../PHP/signin.php?fname=$fname&lname=$lname&country=$country&error=Email is already used");
     $search_query->close();
     $server_connection->close();
     exit;

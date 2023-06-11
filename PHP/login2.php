@@ -16,7 +16,7 @@ else $password=null;
 //connecting to server
 $server_connection = new mysqli("localhost", "root", "", "arctic_airlines");
 if(!$server_connection){
-    header("location: ../index.php?serwer sie zesral");
+    header("location: ../index.php?error=serwer sie zesral");
     exit;
 }
 

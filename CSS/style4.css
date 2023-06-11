@@ -10,10 +10,10 @@
 }
 body{
     background-color: #202020;
-    background-image: url("../art/background2.jpg");
+    background-image: url("../art/background3.jpg");
     background-repeat: no-repeat;
     background-size:cover;
-    backdrop-filter: blur(0.8rem) brightness(90%);
+    backdrop-filter: blur(0.5rem) brightness(90%);
 }
 .idk{
     background-color: rgba(64, 107, 131, 0.9);
@@ -108,4 +108,49 @@ select{
 }
 .button:hover{
     background-color: var(--greenishblue2);
+}
+.error{
+    background-color: rgba(255, 0, 0, 0.3);
+    display: flex;
+    padding: 2vh;
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--textwhite);
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    margin-top: 5vh;
+    right: 10vw;
+    width: 80vw;
+    justify-content: center;
+    cursor: default;
+}
+.check{
+    color: var(--textlight);
+}
+.check small{
+    margin-left: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    transition: color 200ms;
+    cursor: default;
+}
+.check input[type=checkbox]{
+    margin-left: 10px;
+    margin-top: 0;
+    scale: 120%;
+    cursor: pointer;
+}
+.eye{
+    position: absolute;
+    padding: 10px;
+    margin-top: 5px;
+    opacity: 30%;
+    transition: opacity 200ms;
+}
+.idk input[name=pass]:checked + img{
+    opacity: 100%;
 }
