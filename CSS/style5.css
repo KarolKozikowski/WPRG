@@ -200,7 +200,7 @@ td{
     padding: 9px 25px;
     border: none;
     border-radius: 20px;
-    transition: color, 200ms;
+    transition: background-color 200ms;
     cursor: pointer;
 }
 .button2:hover{

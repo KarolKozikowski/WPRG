@@ -18,6 +18,7 @@ body{
 .idk{
     background-color: rgba(64, 107, 131, 0.9);
     display: flex;
+    min-height: 50vh;
     position: absolute;
     justify-content: center;
     right: 30vw;
@@ -43,7 +44,7 @@ body{
 }
 .idk label{
     font-family: 'Open Sans', sans-serif;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #202020;
     border: none;
     border-radius: 15px;
     padding: 5px 20px;
@@ -124,9 +125,58 @@ select{
     padding: 9px 25px;
     border: none;
     border-radius: 20px;
-    transition: color, 200ms;
+    transition: background-color 200ms;
     cursor: pointer;
 }
 .button2:hover{
     background-color: var(--greenishblue2);
+}
+.you{
+    position: absolute;
+    left: 2vw;
+    top: 5vh;
+    color: var(--textwhite);
+    height: 45px;
+}
+.names{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    left: 2vw;
+    top: 11vh;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--textlight);
+    cursor: default;
+    font-weight: 200;
+    transition: background-color 300ms;
+}
+.names:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.names h4{
+    padding: 15px 0;
+}
+.names img{
+    position: absolute;
+    scale: 50%;
+    top: 56px;
+    right: 30px;
+}
+.names button{
+    top: 50px;
+}
+.fat{
+    position: absolute;
+    padding: 10px 31px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Open Sans', sans-serif;
+    color: var(--textlight);
+    transition: background-color 300ms;
+    bottom: 5vh;
+    left: 2vw;
+}
+.fat:hover{
+    background-color: rgba(0, 0, 0, 0.4);
 }
