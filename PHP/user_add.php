@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("connect.php");
 function TSA($your_stuff){
     $your_stuff = trim($your_stuff);
     $your_stuff = stripslashes($your_stuff);
@@ -27,13 +28,6 @@ if(isset($_GET['password'])){
     $password_hashed = password_hash($password, PASSWORD_DEFAULT);
 }
 else $password=null;
-
-//connecting to server
-$server_connection = new mysqli("localhost", "root", "", "arctic_airlines");
-if(!$server_connection){
-    header("location: ../index.php?error=serwer sie zesral");
-    exit;
-}
 
 //chcecking if email already exists
 $search_query=$server_connection->prepare("SELECT users.ID FROM users WHERE Email=?");

@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("connect.php");
 function TSA($your_stuff){
     $your_stuff = trim($your_stuff);
     $your_stuff = stripslashes($your_stuff);
@@ -12,13 +13,6 @@ if(isset($_GET['email'])) $email = TSA($_GET['email']);
 else $email=null;
 if(isset($_GET['password'])) $password = TSA($_GET['password']);
 else $password=null;
-
-//connecting to server
-$server_connection = new mysqli("localhost", "root", "", "arctic_airlines");
-if(!$server_connection){
-    header("location: ../index.php?error=serwer sie zesral");
-    exit;
-}
 
 $select_query=$server_connection->prepare("SELECT users.ID, users.First_name, users.user_password FROM users WHERE Email=?");
 $select_query->bind_param("s", $email);
