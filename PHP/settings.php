@@ -23,6 +23,7 @@ $server_connection->close();
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../CSS/style.css">
         <link rel="stylesheet" href="../CSS/style6.css">
+        <script type="text/javascript" src="../JS/scripts.js"></script>
         <title><?php echo $fname ?> (settings) - Arctic Airlines</title>
     </head>
     <body>
@@ -48,9 +49,17 @@ $server_connection->close();
                 <input type="checkbox" name="is_fat" value="true" <?php if($is_fat==1) echo "checked" ?> onchange="this.form.submit()">
                 <small>Morbidly obese (requires 2 seats)</small>
             </form>
+            <label class="change">Change password</label>
             <form class="idk_form" action="../PHP/user_edit.php?oper=4" method='POST' enctype='multipart/form-data'>
-
+                <input class="input" type="password" id="pass" name="password" minlength="8" placeholder="Enter current password" required>
+                <input name="pass" class="box" type="checkbox" onclick="show_password()">
+                <img class="eye" src="../art/eye.png" alt="see passsword">
+                <br><input class="input" type="password" id="pass2" name="password2" minlength="8" placeholder="Enter new password" required>
+                <input name="pass2" class="box" type="checkbox" onclick="show_password2()">
+                <img class="eye" src="../art/eye.png" alt="see passsword">
+                <br><input type="submit" class="button3" value="save">
             </form>
+            <?php if(isset($_GET['error'])) echo "<h3 class='error'>".$_GET['error']."!</h3>" ?>
         </div>
         <a href="./user.php"><button class="button2">Return</button></a>
         <div class="create">

@@ -1,5 +1,12 @@
 <?php
 session_start();
+function TSA($your_stuff){
+    $your_stuff = trim($your_stuff);
+    $your_stuff = stripslashes($your_stuff);
+    $your_stuff = htmlspecialchars($your_stuff);
+    return $your_stuff;
+}
+$user_id=$_SESSION['user_id'];
 
 ////////////////////////////////////////// MULTI PURPOSE FILE //////////////////////////////////////////////
 
@@ -17,12 +24,6 @@ if(isset($_GET['oper'])){
     //  2 - UPDATE USER INFO
     elseif($_GET['oper']==2){
         //TSA makes sure no unauthorized html lines go through :)
-        function TSA($your_stuff){
-            $your_stuff = trim($your_stuff);
-            $your_stuff = stripslashes($your_stuff);
-            $your_stuff = htmlspecialchars($your_stuff);
-            return $your_stuff;
-        }
         if(isset($_POST['fname'])) $fname = TSA($_POST['fname']);
         else $fname=null;
         if(isset($_POST['lname'])) $lname = TSA($_POST['lname']);
@@ -35,7 +36,6 @@ if(isset($_GET['oper'])){
         else $email=null;
         if(isset($_POST['phone'])) $phone = TSA($_POST['phone']);
         else $phone=null;
-        $user_id=$_SESSION['user_id'];
         //Connecting to server
         include("connect.php");
         //Update query
@@ -62,7 +62,6 @@ if(isset($_GET['oper'])){
     elseif($_GET['oper']==3){
         if(isset($_POST['is_fat'])) $is_fat=1;
         else $is_fat=0;
-        $user_id=$_SESSION['user_id'];
         //Connecting to server
         include("connect.php");
         $update_query = $server_connection->prepare("UPDATE users SET Is_Fat=? WHERE ID=$user_id");
@@ -75,7 +74,30 @@ if(isset($_GET['oper'])){
 
     //  4 - CHANGE PASSWORD
     elseif($_GET['oper']==4){
-        //TODO
+        //TSA makes sure no unauthorized html lines go through :)
+        if(isset($_POST['password'])) $password_old = TSA($_POST['password']);
+        else $password_old=null;
+        if(isset($_POST['password2'])) $password_new = TSA($_POST['password2']);
+        else $password_new=null;
+        //Connecting to server
+        include("connect.php");
+        //getting current password
+        $select_query = $server_connection->query("SELECT users.user_password FROM users WHERE ID=$user_id");
+        while($row = $select_query->fetch_assoc()) $password_old_hashed = $row['user_password'];
+        $select_query->close();
+        //verification
+        if(!password_verify($password_old, $password_old_hashed)){
+            $server_connection->close();
+            exit(header("location: ./settings.php?error=Incorrect password"));
+        }
+        //updating to new password
+        $password_new_hashed=password_hash($password_new, PASSWORD_DEFAULT);
+        $update_query = $server_connection->prepare("UPDATE users SET user_password=? WHERE ID=$user_id");
+        $update_query->bind_param("s", $password_new_hashed);
+        $update_query->execute();
+        $update_query->close();
+        $server_connection->close();
+        exit(header("location: ./settings.php"));
     }
     
     else{
