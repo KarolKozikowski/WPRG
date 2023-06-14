@@ -43,7 +43,7 @@ $server_connection->close();
                 <p><?php echo $phone." | ".$email.", " ?></p>
                 <h4><?php echo $country ?></h4>
                 <img src="../art/flags/<?php echo strtolower($country) ?>.png">
-                <a href="./edit_info.php"><button class="button">Edit information</button></a>
+                <a href="./edit_info.php?settings=true"><button class="button">Edit information</button></a>
             </div>
             <form class="fat" action="../PHP/user_edit.php?oper=3" method='POST'>
                 <input type="checkbox" name="is_fat" value="true" <?php if($is_fat==1) echo "checked" ?> onchange="this.form.submit()">
@@ -60,8 +60,10 @@ $server_connection->close();
                 <br><input type="submit" class="button3" value="save">
             </form>
             <?php if(isset($_GET['error'])) echo "<h3 class='error'>".$_GET['error']."!</h3>" ?>
+            <?php if(isset($_GET['saved'])) echo "<h3 class='saved'>Saved!</h3>" ?>
         </div>
         <a href="./user.php"><button class="button2">Return</button></a>
+        <a href="./user_delete.php"><button class="button4">Delete account</button></a>
         <div class="create">
             <p>Account settings</p>
         </div>

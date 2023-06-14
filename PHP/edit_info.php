@@ -20,7 +20,7 @@ $server_connection->close();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../CSS/style.css">
-        <link rel="stylesheet" href="../CSS/style6.css">
+        <link rel="stylesheet" href="../CSS/style7.css">
         <title><?php echo $fname ?> (Edit) - Arctic Airlines</title>
     </head>
     <body>
@@ -34,7 +34,7 @@ $server_connection->close();
             </nav>
         </header>
         <div class="idk">
-            <form class="idk_form" action="../PHP/user_edit.php?oper=2" method='POST' enctype='multipart/form-data'>
+            <form class="idk_form" action="<?php if(isset($_GET['settings'])) echo "../PHP/user_edit.php?oper=2&settings=true"; else echo "../PHP/user_edit.php?oper=2" ?>" method='POST' enctype='multipart/form-data'>
                 <label>First name:</label>
                 <input class="input" type="text" name="fname" value="<?php echo $fname ?>" placeholder="Enter your first name:" required>
                 <br><label>Last name:</label>
@@ -71,7 +71,7 @@ $server_connection->close();
                 <br><input class="button" type="submit" value="Save">
             </form>
         </div>
-        <a href="./user.php"><button class="button2">Cancel</button></a>
+        <a href="<?php if(isset($_GET['settings'])) echo "./settings.php"; else echo "./user.php" ?>"><button class="button2">Cancel</button></a>
         <div class="create">
             <p>Edit your information</p>
         </div>

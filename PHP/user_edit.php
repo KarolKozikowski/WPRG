@@ -55,7 +55,8 @@ if(isset($_GET['oper'])){
         }
         $check_query->close();
         $server_connection->close();
-        exit(header("location: ./user.php"));
+        if(isset($_GET['settings'])) exit(header("location: ./settings.php"));
+        else exit(header("location: ./user.php"));
     }
     
     //  3 - UPDATE "is_fat" ONLY
@@ -97,7 +98,7 @@ if(isset($_GET['oper'])){
         $update_query->execute();
         $update_query->close();
         $server_connection->close();
-        exit(header("location: ./settings.php"));
+        exit(header("location: ./settings.php?saved=1"));
     }
     
     else{
