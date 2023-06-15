@@ -27,12 +27,16 @@ if(isset($_COOKIE["user_id"]) && isset($_COOKIE["user_name"])){
             <?php
             if(isset($_SESSION["user_name"])) echo "<a href='PHP/user.php'><button class='login_button'>".$_SESSION["user_name"]."</button></a>";
             else echo "<a href='PHP/login.php'><button class='login_button'>Sign in</button></a>";
+            if(isset($_SESSION['user_id']) && $_SESSION['user_id']==1) echo "<a href='PHP/admin/desktop.php'><button class='admin_button'>Admin</button></a>";
             ?>
         </header>
         <section class="main_sectoin">
             <h1>Arctic Airlines</h1>
             <p>Your gateway to The North</p>
-            <a href="HTML/signin.html" class="main_button">Get Started</a>
+            <?php
+            if(isset($_SESSION["user_name"])) echo "<a href='HTML/signin.html' class='main_button'>Let's fly!</a>";
+            else echo"<a href='HTML/signin.html' class='main_button'>Get Started</a>"; 
+            ?>
         </section>
         <footer>
             <p>&copy; 2023 Karol Kozikowski. Not all rights reserved.</p>

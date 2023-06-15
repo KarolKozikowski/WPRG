@@ -40,7 +40,7 @@ $server_connection->close();
             <label class="you">Your information: </label>
             <div class="names">
                 <h3><?php echo $fname." ".$lname.", ".$username ?></h3>
-                <p><?php echo $phone." | ".$email.", " ?></p>
+                <p><?php echo $phone."<br>".$email.", " ?></p>
                 <h4><?php echo $country ?></h4>
                 <img src="../art/flags/<?php echo strtolower($country) ?>.png">
                 <a href="./edit_info.php?settings=true"><button class="button">Edit information</button></a>

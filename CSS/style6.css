@@ -116,7 +116,7 @@ select{
 }
 .button{
     position: absolute;
-    margin-top: 9.3vh;
+    margin-top: 12vh;
     right: 3vw;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -182,7 +182,7 @@ select{
 .names img{
     position: absolute;
     scale: 50%;
-    top: 56px;
+    top: 75px;
     right: 30px;
 }
 .names button{

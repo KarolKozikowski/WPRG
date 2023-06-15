@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+:root{
+    --main_gradient: linear-gradient(0deg, #12191b, #3d6070 100%);
+    --oceanblue: #304d6e;
+    --greenishblue: #006d8f;
+    --greenishblue2: #094f64;
+    --highlights: #00c3ff;
+    --textwhite: #edf0f1;
+    --textlight: #dddddd;
+}
+small{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: yellow;
+    position: relative;
+    top: 40%;
+}
+.box{
+    position: relative;
+    width: 95vw;
+    height: 80vh;
+    left: 2.5vw;
+    top: 3vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    text-align: center;
+}
+.box h1{
+    padding: 20px 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+    color: var(--textwhite);
+}
+.box p{
+    padding: 20px 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--textwhite);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.users{
+    position: absolute;
+    left: 50px;
+    width: 500px;
+    height: 250px;
+    background-color: #006d8f;
+    background-image: url("../art/users.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    filter: grayscale(50%);
+    cursor: pointer;
+}
+.routes{
+    position: absolute;
+    left: calc(47.5vw - 250px);
+    width: 500px;
+    height: 250px;
+    background-color: #006d8f;
+    background-image: url("../art/routes.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    cursor: pointer;
+}
+.flights{
+    position: absolute;
+    right: 50px;
+    width: 500px;
+    height: 250px;
+    background-color: #006d8f;
+    background-image: url("../art/flights.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    filter: grayscale(20%);
+    cursor: pointer;
+}
+.airports{
+    position: absolute;
+    left: calc(31.7vw - 250px);
+    width: 500px;
+    bottom: 60px;
+    height: 250px;
+    background-color: #006d8f;
+    background-image: url("../art/airports.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    filter: grayscale(50%);
+    cursor: pointer;
+}
+.aircraft{
+    position: absolute;
+    right: calc(31.7vw - 250px);
+    width: 500px;
+    bottom: 60px;
+    height: 250px;
+    background-color: #006d8f;
+    background-image: url("../art/aircraft.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    cursor: pointer;
+}
+.blur{
+    height: 250px;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.3rem) brightness(80%);
+    opacity: 0%;
+    transition: opacity 400ms 50ms;
+}
+.blur:hover{
+    opacity: 100%;
+}
+table{
+    position: absolute;
+    left: calc(50% - 40vw);
+    width: 80vw;
+    background-color: var(--greenishblue);
+    border-radius: 10px;
+}
+th{
+    background-color: var(--greenishblue2);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--textwhite);
+    padding: 10px;
+    border-radius: 10px;
+}
+td{
+    text-align: center;
+    background-color: #202020;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(170, 170, 170);
+    padding: 5px;
+    border-radius: 10px;
+}
+.id{
+    color: var(--textlight);
+}
+.red{
+    color: rgb(173, 101, 101);
+}
+.trash{
+    opacity: 50%;
+    transition: opacity 200ms;
+}
+.trash:hover{
+    opacity: 100%;
+}
+.trash2{
+    opacity: 20%;
+    cursor: default;
+}
+.button{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: var(--greenishblue);
+    color: var(--textwhite);
+    padding: 9px 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+.button:hover{
+    background-color: var(--greenishblue2);
+}

@@ -77,7 +77,23 @@ header:hover{
 .login_button:hover{
     background-color: var(--greenishblue2);
 }
-
+.admin_button{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: darkgoldenrod;
+    color: var(--textwhite);
+    padding: 9px 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 40px;
+    transition: background-color 200ms;
+}
+.admin_button:hover{
+    background-color: rgb(138, 102, 11);
+}
 
 
 .main_sectoin{

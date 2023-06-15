@@ -24,7 +24,7 @@ $user_name=$_SESSION['user_name'];
             </nav>
         </header>
         <div class="idk">
-            <p>Enter password to permanently delete your account</p>
+            <?php if(isset($_GET['error'])) echo "<p>Enter the CORRECT password to permanently delete your account</p>"; else echo "<p>Enter password to permanently delete your account</p>";?>
             <form class="delete_form" action="user_delete3.php" method="POST" enctype="multipart/form-data">
                 <label>Enter password</label><br>
                 <input class="input" type="password" id="pass" name="password" placeholder="Enter your password" required>
