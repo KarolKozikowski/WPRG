@@ -12,9 +12,13 @@ small{
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     font-weight: 400;
-    color: yellow;
+    color: var(--textwhite);
     position: relative;
     top: 40%;
+}
+body{
+    background: var(--main_gradient);
+    background-attachment: fixed;
 }
 .box{
     position: relative;
@@ -25,6 +29,10 @@ small{
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 15px;
     text-align: center;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {
+    display: none;
 }
 .box h1{
     padding: 20px 10px;
@@ -110,7 +118,7 @@ small{
     height: 250px;
     width: 500px;
     background-color: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(0.3rem) brightness(80%);
+    backdrop-filter: blur(0.3rem) brightness(60%);
     opacity: 0%;
     transition: opacity 400ms 50ms;
 }
@@ -123,6 +131,10 @@ table{
     width: 80vw;
     background-color: var(--greenishblue);
     border-radius: 10px;
+}
+.test{
+    height: 100px;
+    background-color: #006d8f;
 }
 th{
     background-color: var(--greenishblue2);
@@ -178,4 +190,24 @@ td{
 }
 .button:hover{
     background-color: var(--greenishblue2);
+}
+.flag{
+    text-align: right;
+}
+.flag img{
+    position: absolute;
+    left: 31vw;
+    margin-top: -20px;
+    scale: 40%;
+    border-radius: 20px;
+}
+.flag2{
+    text-align: right;
+}
+.flag2 img{
+    position: absolute;
+    left: 52vw;
+    margin-top: -20px;
+    scale: 40%;
+    border-radius: 20px;
 }

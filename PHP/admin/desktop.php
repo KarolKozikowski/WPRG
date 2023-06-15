@@ -9,7 +9,7 @@ include("./check.php");
         <link rel="stylesheet" href="../../CSS/style.css">
         <link rel="stylesheet" href="../../CSS/style8.css">
         <script type="text/javascript" src="../../JS/scripts.js"></script>
-        <title><?php echo $fname ?> Admin - Desktop - Arctic Airlines</title>
+        <title>Admin - Desktop - Arctic Airlines</title>
     </head>
     <body>
         <header>
@@ -28,7 +28,7 @@ include("./check.php");
                 </div>
                 <p>Users</p>
             </div>
-            <div class="routes">
+            <div class="routes" onclick="window.location='./routes.php';">
                 <div class="blur">
                     <small>Edit</small>
                 </div>
