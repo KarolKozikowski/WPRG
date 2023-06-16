@@ -156,7 +156,7 @@ td{
     border-radius: 10px;
 }
 .id{
-    color: var(--textlight);
+    color: var(--textwhite);
 }
 .red{
     color: rgb(173, 101, 101);
@@ -174,7 +174,7 @@ td{
 }
 .button{
     position: absolute;
-    top: 30px;
+    top: 20px;
     right: 20px;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -210,4 +210,65 @@ td{
     margin-top: -20px;
     scale: 40%;
     border-radius: 20px;
+}
+.edit{
+    opacity: 50%;
+    margin-right: 30px;
+    filter:grayscale(100%);
+    transition-property: opacity, filter;
+    transition-duration: 200ms;
+}
+.edit:hover{
+    opacity: 100%;
+    filter:grayscale(0%);
+}
+input[type=text]{
+    background-color: #202020;
+    border: 2px solid #202020;
+    border-radius: 15px;
+    padding: 5px 10px;
+    color: var(--textlight);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    transition: border 200ms;
+}
+input[type=text]:hover{
+    border: 2px solid var(--highlights);
+    background-color: #1d1d1d;
+}
+select{
+    background-color: #202020;
+    border: 2px solid #202020;
+    border-radius: 15px;
+    padding: 5px 10px;
+    color: var(--textlight);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    transition: border 200ms;
+    cursor: pointer;
+}
+select:hover{
+    border: 2px solid var(--highlights);
+    background-color: #1d1d1d;
+}
+.save{
+    position: absolute;
+    top: 20px;
+    right: 150px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: darkgoldenrod;
+    color: var(--textwhite);
+    padding: 9px 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+.save:hover{
+    background-color: rgb(138, 102, 11);
 }

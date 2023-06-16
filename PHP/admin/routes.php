@@ -46,7 +46,7 @@ include("./check.php");
                     echo"<td>".$row['Enroute_time']."</td>";
                     echo"<td class='flag'><img src='../../art/flags/".strtolower($row['dep_country']).".png'>(".$row['dep_city'].")__".$row['dep_icao']." / ".$row['dep_iata']."_</td>";
                     echo"<td class='flag2'><img src='../../art/flags/".strtolower($row['arr_country']).".png'>(".$row['arr_city'].")__".$row['arr_icao']." / ".$row['arr_iata']."_</td>";
-                    echo"<td><button>Edit</button><button>Add</button></td>";
+                    echo"<td><a href='./routes_mod.php?mod=2&id=".$row['r_id']."'><img class='edit' src='../../art/edit.png'></a><a href='./routes_mod.php?mod=1&id=".$row['r_id']."'><img class='trash' src='../../art/trash.png'></a></td>";
                     echo"</tr>";
                 }
                 $select_query->close();
