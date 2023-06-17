@@ -33,21 +33,19 @@ if($result->num_rows===1){
             setcookie("user_id", $user_id, time()+(86400*14), "/");
             setcookie("user_name", $user_name, time()+(86400*14), "/");
         }
-        header("location: ../PHP/user.php"); //temp
         $select_query->close();
         $server_connection->close();
-        exit;
+        if($user_id==1) exit(header("location: ../PHP/admin/desktop.php"));
+        else exit(header("location: ../index.php"));
     }
     else{
-        header("location: ../PHP/login.php?error=Incorrect password");
         $select_query->close();
         $server_connection->close();
-        exit;
+        exit(header("location: ../PHP/login.php?error=Incorrect password"));
     }
 }
 else{
-    header("location: ../PHP/login.php?error=Incorrect email");
-    exit;
+    exit(header("location: ../PHP/login.php?error=Incorrect email"));
 }
 $select_query->close();
 $server_connection->close();

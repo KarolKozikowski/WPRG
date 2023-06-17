@@ -9,22 +9,22 @@ function TSA($your_stuff){
 }
 
 //TSA makes sure no unauthorized html lines go through :)
-if(isset($_GET['fname'])) $fname = TSA($_GET['fname']);
+if(isset($_POST['fname'])) $fname = TSA($_POST['fname']);
 else $fname=null;
-if(isset($_GET['lname'])) $lname = TSA($_GET['lname']);
+if(isset($_POST['lname'])) $lname = TSA($_POST['lname']);
 else $lname=null;
-if(isset($_GET['country'])) $country = TSA($_GET['country']);
+if(isset($_POST['country'])) $country = TSA($_POST['country']);
 else $country=null;
-if(isset($_GET['email'])) $email = TSA($_GET['email']);
+if(isset($_POST['email'])) $email = TSA($_POST['email']);
 else $email=null;
-if(isset($_GET['phone'])) $phone = TSA($_GET['phone']);
+if(isset($_POST['phone'])) $phone = TSA($_POST['phone']);
 else $phone=null;
-if(isset($_GET['is_fat'])) $is_fat = 1;
+if(isset($_POST['is_fat'])) $is_fat = 1;
 else $is_fat=0;
-if(isset($_GET['username'])) $username = TSA($_GET['username']);
+if(isset($_POST['username'])) $username = TSA($_POST['username']);
 else $username=null;
-if(isset($_GET['password'])){
-    $password = TSA($_GET['password']);
+if(isset($_POST['password'])){
+    $password = TSA($_POST['password']);
     $password_hashed = password_hash($password, PASSWORD_DEFAULT);
 }
 else $password=null;
@@ -52,9 +52,8 @@ $insert_query=$server_connection->prepare("INSERT INTO users (ID, First_name, La
 $insert_query->bind_param("isssssiss", $user_id, $fname, $lname, $phone, $email, $country, $is_fat, $username, $password_hashed);
 $insert_query->execute();
 $_SESSION["user_id"]=$user_id;
-$_SESSION["user_name"]=$user_name;
-header("location: ../index.php");
+$_SESSION["user_name"]=$username;
 $insert_query->close();
 $server_connection->close();
-exit;
+exit(header("location: ../PHP/user.php"));
 ?>

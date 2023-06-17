@@ -29,7 +29,7 @@
                 <img class="flag" src="../art/flags/<?php echo strtolower($_GET['country']) ?>.png" alt="flag">
                 <p class="country"><?php echo $_GET['country'] ?></p>
             </div>
-            <form class="idk_form" action="user_add.php" method='GET' enctype='multipart/form-data'>
+            <form class="idk_form" action="user_add.php" method='POST' enctype='multipart/form-data'>
                 <label>Email:</label><br>
                 <input class="input" type="email" name="email" placeholder="enter your email" required>
                 <br><label>Username:</label><br>

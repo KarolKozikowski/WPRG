@@ -153,3 +153,12 @@ footer {
     right:10px;
     opacity: 50%;
 }
+.error{
+    color: red;
+    position: absolute;
+    top: 50vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    left: calc(50% - 260px);
+}
