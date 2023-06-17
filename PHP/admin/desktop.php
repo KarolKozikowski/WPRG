@@ -34,19 +34,19 @@ include("./check.php");
                 </div>
                 <p>Routes</p>
             </div>
-            <div class="flights">
+            <div class="flights" onclick="window.location='./flights.php';">
                 <div class="blur">
                     <small>Edit</small>
                 </div>
                 <p>Flights</p>
             </div>
-            <div class="airports">
+            <div class="airports" onclick="window.location='./airports.php';">
                 <div class="blur">
                     <small>Edit</small>
                 </div>
                 <p>Airports</p>
             </div>
-            <div class="aircraft">
+            <div class="aircraft" onclick="window.location='./aircraft.php';">
                 <div class="blur">
                     <small>Edit</small>
                 </div>

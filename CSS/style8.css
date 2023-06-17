@@ -40,6 +40,7 @@ body{
     font-size: 30px;
     font-weight: 200;
     color: var(--textwhite);
+    cursor: default;
 }
 .box p{
     padding: 20px 10px;
@@ -197,9 +198,10 @@ td{
 .flag img{
     position: absolute;
     left: 31vw;
-    margin-top: -20px;
-    scale: 40%;
-    border-radius: 20px;
+    margin-top: -18px;
+    scale: 25%;
+    opacity: 70%;
+    border-radius: 15px;
 }
 .flag2{
     text-align: right;
@@ -207,9 +209,28 @@ td{
 .flag2 img{
     position: absolute;
     left: 52vw;
-    margin-top: -20px;
-    scale: 40%;
-    border-radius: 20px;
+    margin-top: -18px;
+    scale: 25%;
+    opacity: 70%;
+    border-radius: 15px;
+}
+.flag3{
+    text-align: left;
+}
+.flag3 img{
+    position: absolute;
+    right: 7vw;
+    margin-top: -19px;
+    scale: 30%;
+    opacity: 70%;
+    border-radius: 15px;
+}
+.flag4 img{
+    position: absolute;
+    left: 30.75vw;
+    margin-top: -18px;
+    scale: 25%;
+    opacity: 70%;
 }
 .edit{
     opacity: 50%;
@@ -222,7 +243,7 @@ td{
     opacity: 100%;
     filter:grayscale(0%);
 }
-input[type=text]{
+input[type=text], input[type=date], input[type=time]{
     background-color: #202020;
     border: 2px solid #202020;
     border-radius: 15px;
@@ -233,7 +254,7 @@ input[type=text]{
     text-align: center;
     transition: border 200ms;
 }
-input[type=text]:hover{
+input[type=text]:hover, input[type=date]:hover, input[type=time]:hover{
     border: 2px solid var(--highlights);
     background-color: #1d1d1d;
 }
@@ -271,4 +292,23 @@ select:hover{
 }
 .save:hover{
     background-color: rgb(138, 102, 11);
+}
+.add{
+    position: absolute;
+    top: 20px;
+    right: 150px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: green;
+    color: var(--textwhite);
+    padding: 9px 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+.add:hover{
+    background-color: rgb(13, 104, 13);
 }

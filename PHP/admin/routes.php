@@ -53,6 +53,7 @@ include("./check.php");
                 $server_connection->close();
                 ?>
             </table>
+            <a href="./routes_mod.php?mod=3"><button class="add">Add new</button></a>
             <a href="./desktop.php"><button class="button">Return</button></a>
         </div>
     </body>
