@@ -36,7 +36,7 @@ if(isset($_COOKIE["user_id"]) && isset($_COOKIE["user_name"])){
             <?php
             if(isset($_SESSION["user_name"])) echo "<a href='HTML/signin.html' class='main_button'>Let's fly!</a>";
             else echo"<a href='HTML/signin.html' class='main_button'>Get Started</a>"; 
-            if(isset($_GET['error'])) echo"<h2 class='error'>".$_GET['error']."</h2>";
+            if(isset($_GET['error'])) echo"<h2 class='error10'>".$_GET['error']."</h2>";
             ?>
         </section>
         <footer>
