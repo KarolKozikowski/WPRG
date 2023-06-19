@@ -29,7 +29,7 @@ $server_connection->close();
             <nav>
                 <ul class="nav_links">
                     <li><a href="../index.php">Home Page</a></li>
-                    <li><a href="../index.php">Bookings</a></li>
+                    <li><a href="./book.php">Bookings</a></li>
                     <a href="./settings.php"><img src="../art/settings.png" class="settings"></a>
                     <a href='user_edit.php?oper=1'><button class='login_button'>Sign out</button></a>
                 </ul>

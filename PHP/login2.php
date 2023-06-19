@@ -14,7 +14,7 @@ else $email=null;
 if(isset($_GET['password'])) $password = TSA($_GET['password']);
 else $password=null;
 
-$select_query=$server_connection->prepare("SELECT users.ID, users.First_name, users.user_password FROM users WHERE Email=?");
+$select_query=$server_connection->prepare("SELECT users.ID, users.username, users.user_password FROM users WHERE Email=?");
 $select_query->bind_param("s", $email);
 $select_query->execute();
 $result=$select_query->get_result();
@@ -24,14 +24,14 @@ if($result->num_rows===1){
     while($row=$result->fetch_assoc()){
         $user_id=$row['ID']; //get user ID
         $user_password=$row['user_password']; //hashed password
-        $user_name=$row['First_name']; //get user name
+        $username=$row['username']; //get user name
     }
     if(password_verify($password, $user_password)){
         $_SESSION["user_id"]=$user_id;
-        $_SESSION["user_name"]=$user_name;
+        $_SESSION["user_name"]=$username;
         if(isset($_GET['remember'])){
             setcookie("user_id", $user_id, time()+(86400*14), "/");
-            setcookie("user_name", $user_name, time()+(86400*14), "/");
+            setcookie("user_name", $username, time()+(86400*14), "/");
         }
         $select_query->close();
         $server_connection->close();

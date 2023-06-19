@@ -106,13 +106,12 @@ header:hover{
     background-size: 100vw;
     background-position:center;
     background-color: #202020;
-    opacity: 95%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition-property: box-shadow;
     transition-duration: 200ms;
     transition-delay: 50ms;
 }
 .main_sectoin:hover{
-    opacity: 100%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .main_sectoin h1{
@@ -148,7 +147,7 @@ header:hover{
 }
 footer {
     color: #fff;
-    position:absolute;
+    position:fixed;
     bottom:0%;
     right:10px;
     opacity: 50%;

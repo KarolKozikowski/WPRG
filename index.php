@@ -18,8 +18,8 @@ if(isset($_COOKIE["user_id"]) && isset($_COOKIE["user_name"])){
             <img class="logo" src="art/logo.png">
             <nav>
                 <ul class="nav_links">
-                    <li><a href="#">Connections</a></li>
-                    <li><a href="#">Book Flight</a></li>
+                    <li><a href="./PHP/connections.php">Connections</a></li>
+                    <li><a href="./PHP/book.php">Book Flight</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
@@ -34,7 +34,7 @@ if(isset($_COOKIE["user_id"]) && isset($_COOKIE["user_name"])){
             <h1>Arctic Airlines</h1>
             <p>Your gateway to The North</p>
             <?php
-            if(isset($_SESSION["user_name"])) echo "<a href='HTML/signin.html' class='main_button'>Let's fly!</a>";
+            if(isset($_SESSION["user_name"])) echo "<a href='./PHP/connections.php' class='main_button'>Let's fly!</a>";
             else echo"<a href='HTML/signin.html' class='main_button'>Get Started</a>"; 
             if(isset($_GET['error'])) echo"<h2 class='error10'>".$_GET['error']."</h2>";
             ?>
