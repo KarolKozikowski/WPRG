@@ -1,7 +1,7 @@
 # WPRG
 
 Virtual Airline (Educational Project).
-Features:
+/nFeatures:
 > Searching for flight connections
 > Log-in/Sign-in/Account settings/Delete account
 > Booking flights
