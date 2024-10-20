@@ -1,3 +1,15 @@
 # WPRG
-School project.
-Virtual airline called Arctic Airlines. Based in Helsinki, it operates mainly around Nordic countries but also internationaly thus connecting the world with some remote northern destinations.
+
+Virtual Airline (Educational Project).
+Features:
+> Searching for flight connections
+> Log-in/Sign-in/Account settings/Delete account
+> Booking flights
+> Admin Panel
+Technology:
+> PHP, HTML, CSS, JS, SQL
+> Session
+> Cookies
+> Hashing passwords
+> Local MySQL Database
+> Every DB table includes CRUD operations
