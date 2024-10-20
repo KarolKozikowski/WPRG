@@ -6,7 +6,7 @@ Virtual Airline (Educational Project).
 - Log-in/Sign-in/Account settings/Delete account
 - Booking flights
 - Admin Panel
-* Technology:
+> Technology:
 - PHP, HTML, CSS, JS, SQL
 - Session
 - Cookies
